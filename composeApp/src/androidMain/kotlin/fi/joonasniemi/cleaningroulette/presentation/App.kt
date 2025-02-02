@@ -1,7 +1,6 @@
 package fi.joonasniemi.cleaningroulette.presentation
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -18,7 +17,7 @@ import fi.joonasniemi.cleaningroulette.ui.theme.CleaningRouletteTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun CleaningRouletteApp(
+fun App(
     viewModel: CleaningRouletteViewModel = koinViewModel(),
 ) {
     val tasks by viewModel.tasks.collectAsStateWithLifecycle()
@@ -30,8 +29,6 @@ fun CleaningRouletteApp(
                 .background(Color.Gray)
         ) { innerPadding ->
             Column(Modifier.padding(innerPadding)) {
-                Text("Hello roulette. Viewmodel says: ${viewModel.hello()}")
-
                 Text("Tasks:")
                 LazyColumn {
                     items(tasks) {

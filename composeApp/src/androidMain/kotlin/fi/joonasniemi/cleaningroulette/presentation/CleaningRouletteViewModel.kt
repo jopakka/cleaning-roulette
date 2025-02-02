@@ -14,6 +14,4 @@ class CleaningRouletteViewModel(
         SharingStarted.Eagerly,
         emptyList()
     )
-
-    fun hello() = "Hello"
 }

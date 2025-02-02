@@ -30,6 +30,8 @@ kotlin {
         commonMain.dependencies {
             api(libs.koin.core)
             implementation(libs.kotlinx.coroutines.core)
+
+            api(libs.kotlin.test)
         }
 
         androidMain.dependencies {
@@ -37,6 +39,11 @@ kotlin {
             implementation(libs.room.runtime)
 
             implementation(libs.koin.android)
+
+            api(libs.kotlin.test.junit)
+            api(libs.androidx.junit)
+            api(libs.junit)
+            api(libs.androidx.espresso.core)
         }
     }
 }
