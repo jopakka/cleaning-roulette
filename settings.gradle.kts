@@ -19,5 +19,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Cleaning Roulette"
-include(":app")
+rootProject.name = "CleaningRoulette"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include(":composeApp")
+include(":shared")
