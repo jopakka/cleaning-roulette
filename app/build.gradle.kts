@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.cleaningroulette.android.application)
     alias(libs.plugins.cleaningroulette.android.application.compose)
+    alias(libs.plugins.cleaningroulette.android.koin)
 }
 
 android {
@@ -26,7 +27,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.data)
     implementation(projects.core.designsystem)
+    implementation(projects.core.model)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtimeCompose)

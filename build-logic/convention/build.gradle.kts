@@ -25,6 +25,8 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.compose.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
 }
 
 tasks {
@@ -51,6 +53,14 @@ gradlePlugin {
         register("androidLibraryCompose") {
             id = libs.plugins.cleaningroulette.android.library.compose.get().pluginId
             implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidRoom") {
+            id = libs.plugins.cleaningroulette.android.room.get().pluginId
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("androidKoin") {
+            id = libs.plugins.cleaningroulette.android.koin.get().pluginId
+            implementationClass = "AndroidKoinConventionPlugin"
         }
     }
 }
