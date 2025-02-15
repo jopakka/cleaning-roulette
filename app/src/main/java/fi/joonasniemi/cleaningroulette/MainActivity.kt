@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import fi.joonasniemi.cleaningroulette.ui.theme.CleaningRouletteTheme
+import fi.joonasniemi.cleaningroulette.core.designsystem.theme.CleaningRouletteTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -20,5 +20,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Cleaning Roulette"
+rootProject.name = "cleaning-roulette"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
+include(":core:designsystem")

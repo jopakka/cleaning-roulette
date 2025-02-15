@@ -1,4 +1,4 @@
-package fi.joonasniemi.cleaningroulette.ui.theme
+package fi.joonasniemi.cleaningroulette.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

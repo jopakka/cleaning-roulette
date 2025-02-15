@@ -6,7 +6,7 @@ plugins {
 //    alias(libs.plugins.android.lint)
 }
 
-group = "fi.joonasniemi.buildlogic"
+group = "fi.joonasniemi.cleaningroulette.build_logic"
 
 // Configure the build-logic plugins to target JDK 17
 // This matches the JDK used to build the project, and is not related to what is running on device.
@@ -45,8 +45,12 @@ gradlePlugin {
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.cleaningroulette.android.library.get().pluginId
+            id = libs.plugins.cleaningroulette.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = libs.plugins.cleaningroulette.android.library.compose.get().pluginId
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
     }
 }
