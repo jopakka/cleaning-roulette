@@ -13,7 +13,4 @@ dependencies {
     api(libs.androidx.ui.tooling)
     api(libs.androidx.ui.tooling.preview)
     api(libs.androidx.material3)
-
-    testImplementation(libs.androidx.ui.test.junit4)
-    testImplementation(libs.androidx.ui.test.manifest)
 }
